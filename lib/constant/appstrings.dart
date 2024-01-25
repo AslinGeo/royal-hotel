@@ -1,37 +1,38 @@
-class AppStrings {
-  static const String foodienator = "Royal Hotel";
-  static const String splashMessage = "Order your favorite Meals Here!";
-  static const String signin = "Sign in";
-  static const String register = "Register";
-  static const String email = "Email";
-  static const String userName = "Username";
-  static const String password = "Password";
-  static const String registration = "Registration";
-  static const String complete = "Complete";
-  static const String textContinue = "Continue";
-  static const String welcomeText = "Welcome Back";
-  static const String login = "Login";
-  static const String passwordErrorMsg =
-      "Password must be at least 6 characters";
-  static const String emailErrorMsg = "Enter a valid email address";
-  static const String nameErrorMsg = "Please enter your name";
-  static const String logout = "Logout";
-  static const String inventory = "Inventory";
-  static const String menu = "Menu";
-  static const String orders = "Orders";
-  static const String assignedOrders = "Assigned Orders";
-  static const String completedOrders = "Completed Orders";
-  static const String newOrders = "New Orders";
-  static const String addMenu = "Add Menu";
-  static const String back = "Back";
-  static const String price = "Price";
-  static const String name = "Name";
-  static const String description = "Description";
-  static const String uplodHere = "Upload Here";
-  static const String createMenu = "Create Menu";
-  static const String createInventory = "Create Inventory";
-  static const String addInventory = "Add Inventory";
+import 'package:get/get.dart';
 
-  static const String validationMsg = "Please enter the name and price";
-  static const String placeOrder = "Place Order";
+class AppStrings {
+  static String foodienator = "foodienator".tr;
+  static String splashMessage = "splashMessage".tr;
+  static String signin = "signin".tr;
+  static String register = "register".tr;
+  static String email = "email".tr;
+  static String userName = "userName".tr;
+  static String password = "password".tr;
+  static String registration = "registration".tr;
+  static String complete = "Complete".tr;
+  static String textContinue = "continue".tr;
+  static String welcomeText = "welcomeText".tr;
+  static String login = "ogin".tr;
+  static String passwordErrorMsg = "passwordErrorMsg".tr;
+  static String emailErrorMsg = "emailErrorMsg".tr;
+  static String nameErrorMsg = "nameErrorMsg".tr;
+  static String logout = "logout".tr;
+  static String inventory = "inventory".tr;
+  static String menu = "menu".tr;
+  static String orders = "orders".tr;
+  static String assignedOrders = "assignedOrders".tr;
+  static String completedOrders = "completedOrders".tr;
+  static String newOrders = "newOrders".tr;
+  static String addMenu = "addMenu".tr;
+  static String back = "back".tr;
+  static String price = "price".tr;
+  static String name = "name".tr;
+  static String description = "description".tr;
+  static String uplodHere = "uploadHere".tr;
+  static String createMenu = "createMenu".tr;
+  static String createInventory = "createInventory".tr;
+  static String addInventory = "addInventory".tr;
+
+  static String validationMsg = "validationMsg".tr;
+  static String placeOrder = "placeOrder".tr;
 }

@@ -192,7 +192,7 @@ class commonWidgets {
                     height: 15,
                   ),
                   filePath.value == ""
-                      ? const Text(AppStrings.uplodHere)
+                      ? Text(AppStrings.uplodHere)
                       : Container(),
                   const SizedBox(
                     height: 15,
@@ -207,8 +207,8 @@ class commonWidgets {
                       child: TextFormField(
                         validator: (value) {},
                         controller: nameController,
-                        decoration: const InputDecoration(
-                          hintText: AppStrings.name,
+                        decoration: InputDecoration(
+                          hintText: AppStrings.name.toString(),
                           border: InputBorder.none,
                         ),
                       ),
@@ -227,7 +227,7 @@ class commonWidgets {
                       child: TextFormField(
                         validator: (value) {},
                         controller: descriptionController,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           hintText: AppStrings.description,
                           border: InputBorder.none,
                         ),
@@ -247,7 +247,7 @@ class commonWidgets {
                       child: TextFormField(
                         validator: (value) {},
                         controller: priceController,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           prefix: null,
                           hintText: AppStrings.price,
                           border: InputBorder.none,
