@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB0rhffkIjxDVa2se9k1VUaoMB32XvUIJ0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>644111868719</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.royalHotel.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>royal-hotel-a6b0a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>royal-hotel-a6b0a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:644111868719:ios:11ffb67cf92f07ac13b7da</string>
+</dict>
+</plist>

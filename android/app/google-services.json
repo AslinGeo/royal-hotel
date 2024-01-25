@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "644111868719",
+    "project_id": "royal-hotel-a6b0a",
+    "storage_bucket": "royal-hotel-a6b0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644111868719:android:e719d9b9b85332f613b7da",
+        "android_client_info": {
+          "package_name": "com.example.royal_hotel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWQgpFXJ53HP5Hyxaf92PFMda2EaPc0ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
