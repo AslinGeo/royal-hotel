@@ -52,7 +52,7 @@ class HomeView extends GetResponsiveView<HomeController> {
                 ),
               ),
               Text(
-                AppStrings.foodienator,
+                "foodienator".tr,
                 style: AppFonts().h1.copyWith(color: AppColors.lightGreen),
               ),
               Icon(
@@ -74,7 +74,7 @@ class HomeView extends GetResponsiveView<HomeController> {
           ),
           Container(
             padding: const EdgeInsets.only(left: 10, right: 10),
-            child: ButtonsTabBar(
+            child: Obx(() => ButtonsTabBar(
                 onTap: (index) async {
                   controller.selectedIndex.value = index;
                   controller.getData();
@@ -102,15 +102,21 @@ class HomeView extends GetResponsiveView<HomeController> {
                         return Tab(
                           text: data["name"],
                         );
-                      }).toList()),
+                      }).toList())),
           ),
           Expanded(
             child: TabBarView(
               physics: const NeverScrollableScrollPhysics(),
               children: [
-                menuList(controller.menus),
-                menuList(controller.inventorys),
-                menuList(controller.orders)
+                menuList(controller.isAdmin.value
+                    ? controller.menus
+                    : controller.chefOrders),
+                menuList(controller.isAdmin.value
+                    ? controller.inventorys
+                    : controller.chefAssignedOrders),
+                menuList(controller.isAdmin.value
+                    ? controller.orders
+                    : controller.chefCompletedOrders)
               ],
             ),
           )

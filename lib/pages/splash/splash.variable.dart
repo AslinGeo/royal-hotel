@@ -9,4 +9,5 @@ mixin SplashVariable {
     {"name": "German", "key": "de"},
     {"name": "Portuguese", "key": "pt"},
   ].obs;
+  RxString selectedLanguage = "English".obs;
 }

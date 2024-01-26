@@ -45,7 +45,7 @@ class LoginView extends GetResponsiveView<LoginController> {
               height: 20,
             ),
             Text(
-              AppStrings.welcomeText,
+              "welcomeText".tr,
               style: AppFonts().h1.copyWith(color: AppColors.black),
             ),
             const SizedBox(
@@ -68,7 +68,7 @@ class LoginView extends GetResponsiveView<LoginController> {
                       Icons.email,
                       color: AppColors.lightGreen,
                     ),
-                    hintText: AppStrings.email,
+                    hintText: "email".tr,
                     border: InputBorder.none,
                   ),
                 ),
@@ -102,7 +102,7 @@ class LoginView extends GetResponsiveView<LoginController> {
                       Icons.lock,
                       color: AppColors.lightGreen,
                     ),
-                    hintText: AppStrings.password,
+                    hintText: "password".tr,
                     border: InputBorder.none,
                   ),
                 ),
@@ -135,7 +135,7 @@ class LoginView extends GetResponsiveView<LoginController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      AppStrings.login,
+                      "login".tr,
                       style: AppFonts().h2.copyWith(color: AppColors.white),
                     ),
                   ],

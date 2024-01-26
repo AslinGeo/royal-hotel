@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:royal_hotel/constant/appstrings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,18 +10,22 @@ mixin HomeVariables {
   String userName = "";
   String userEmail = "";
   RxList adminList = [
-    {"name": AppStrings.menu, "key": "Menu"},
-    {"name": AppStrings.inventory, "key": "Inventory"},
-    {"name": AppStrings.orders, "key": "Orders"},
+    {"name": "menu".tr, "key": "Menu"},
+    {"name": "inventory".tr, "key": "Inventory"},
+    {"name": "orders".tr, "key": "Orders"},
   ].obs;
   RxList chefList = [
-    {"name": AppStrings.newOrders, "key": "New Orders"},
-    {"name": AppStrings.assignedOrders, "key": "Assigned Orders"},
-    {"name": AppStrings.completedOrders, "key": "Completed Orders"},
+    {"name": "newOrders".tr, "key": "New Orders"},
+    {"name": "assignedOrders".tr, "key": "Assigned Orders"},
+    {"name": "completedOrders".tr, "key": "Completed Orders"},
   ].obs;
-  RxBool isAdmin = true.obs;
+  RxBool isAdmin = false.obs;
   RxInt selectedIndex = 0.obs;
   RxList menus = [].obs;
   RxList orders = [].obs;
   RxList inventorys = [].obs;
+  RxList userList = [].obs;
+  RxList chefOrders = [].obs;
+  RxList chefAssignedOrders = [].obs;
+  RxList chefCompletedOrders = [].obs;
 }

@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:royal_hotel/constant/appcolors.dart';
 import 'package:royal_hotel/firebase_options.dart';
 import 'package:royal_hotel/route/route.dart';
+import 'package:royal_hotel/translation/translation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,8 +27,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: LocalString(),
       locale: const Locale('en'),
-      fallbackLocale: const Locale('en'),
+      // fallbackLocale: const Locale('en'),
       title: 'Royal Hotel',
       theme: ThemeData(),
       initialRoute: AppPages.inital,

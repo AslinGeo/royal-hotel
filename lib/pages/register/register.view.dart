@@ -53,7 +53,7 @@ class RegisterView extends GetResponsiveView<RegisterController> {
                       Icons.email,
                       color: AppColors.lightGreen,
                     ),
-                    hintText: AppStrings.email,
+                    hintText: "email".tr,
                     border: InputBorder.none,
                   ),
                 ),
@@ -82,7 +82,7 @@ class RegisterView extends GetResponsiveView<RegisterController> {
                       Icons.person,
                       color: AppColors.lightGreen,
                     ),
-                    hintText: AppStrings.userName,
+                    hintText: "userName".tr,
                     border: InputBorder.none,
                   ),
                 ),
@@ -113,7 +113,7 @@ class RegisterView extends GetResponsiveView<RegisterController> {
                       Icons.lock,
                       color: AppColors.lightGreen,
                     ),
-                    hintText: AppStrings.password,
+                    hintText: "password".tr,
                     border: InputBorder.none,
                   ),
                 ),
@@ -146,7 +146,7 @@ class RegisterView extends GetResponsiveView<RegisterController> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      AppStrings.register,
+                      "register".tr,
                       style: AppFonts().h2.copyWith(color: AppColors.white),
                     ),
                   ],
@@ -186,14 +186,14 @@ class RegisterView extends GetResponsiveView<RegisterController> {
             height: 30,
           ),
           Text(
-            AppStrings.registration,
+            "registration".tr,
             style: AppFonts().h1.copyWith(color: AppColors.black),
           ),
           const SizedBox(
             height: 3,
           ),
           Text(
-            AppStrings.complete,
+            "complete".tr,
             style: AppFonts().h1.copyWith(color: AppColors.black),
           ),
           const SizedBox(
@@ -217,7 +217,7 @@ class RegisterView extends GetResponsiveView<RegisterController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    AppStrings.textContinue,
+                    "textContinue".tr,
                     style: AppFonts().h2.copyWith(color: AppColors.white),
                   ),
                 ],

@@ -37,38 +37,39 @@ class SplashView extends GetResponsiveView<SplashController> {
           ],
         ),
         Text(
-          AppStrings.foodienator,
+          "foodienator".tr,
           style: AppFonts().h1.copyWith(color: AppColors.white),
         ),
         const SizedBox(
           height: 10,
         ),
         Text(
-          AppStrings.splashMessage,
+          "splashMessage".tr,
           style: AppFonts().h3.copyWith(color: AppColors.white),
         ),
         bottomButton(),
         const SizedBox(
           height: 20,
         ),
-        InkWell(
-          onTap: () {
-            languageBottomsheet(Get.context);
-          },
-          child: Container(
-            width: 300,
-            decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(12)),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 20),
-              child: Center(
-                child: Text(AppStrings.register,
-                    style: AppFonts().h3Bold.copyWith(color: AppColors.black)),
+        Obx(() => InkWell(
+              onTap: () {
+                languageBottomsheet(Get.context);
+              },
+              child: Container(
+                width: 300,
+                decoration: BoxDecoration(
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Center(
+                    child: Text(controller.selectedLanguage.value,
+                        style:
+                            AppFonts().h3Bold.copyWith(color: AppColors.black)),
+                  ),
+                ),
               ),
-            ),
-          ),
-        )
+            ))
       ],
     );
   }
@@ -94,7 +95,7 @@ class SplashView extends GetResponsiveView<SplashController> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 20),
                     child: Center(
-                      child: Text(AppStrings.signin,
+                      child: Text("signin".tr,
                           style: AppFonts()
                               .h3Bold
                               .copyWith(color: AppColors.white)),
@@ -117,7 +118,7 @@ class SplashView extends GetResponsiveView<SplashController> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 20),
                     child: Center(
-                      child: Text(AppStrings.register,
+                      child: Text("register".tr,
                           style: AppFonts()
                               .h3Bold
                               .copyWith(color: AppColors.black)),
@@ -138,38 +139,43 @@ class SplashView extends GetResponsiveView<SplashController> {
         enableDrag: false,
         isScrollControlled: true,
         context: context,
-        builder: (context) => SizedBox(
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Text("Select Language"),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Divider(),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  ...controller.languages.map((element) {
-                    return InkWell(
-                      onTap: () {
-                        Get.updateLocale(Locale(element["key"]));
-                        Get.back();
-                      },
-                      child: Column(
-                        children: [
-                          Text(element["name"]),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Divider()
-                        ],
-                      ),
-                    );
-                  }).toList()
-                ],
+        builder: (context) => SingleChildScrollView(
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height * 0.45,
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Text("Select Language"),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Divider(),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    ...controller.languages.map((element) {
+                      return InkWell(
+                        onTap: () {
+                          Get.updateLocale(Locale(element["key"]));
+                          controller.selectedLanguage.value = element["name"];
+                          controller.update();
+                          Get.back();
+                        },
+                        child: Column(
+                          children: [
+                            Text(element["name"]),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Divider()
+                          ],
+                        ),
+                      );
+                    }).toList()
+                  ],
+                ),
               ),
             ));
   }

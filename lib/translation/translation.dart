@@ -1,5 +1,3 @@
-
-
 import 'package:get/get.dart';
 
 class LocalString extends Translations {
@@ -37,7 +35,11 @@ class LocalString extends Translations {
           "createInventory": "Create Inventory",
           "addInventory": "Add Inventory",
           "validationMsg": "Please enter the name and price",
-          "placeOrder": "Place Order"
+          "placeOrder": "Place Order",
+          "assigneToMe": "Assigne To Me",
+          "assigneToChef": "Assigne To Chef",
+          "selectChef": "Select Chef",
+          "changeToComplete": "Change To Complete"
         },
         "ja": {
           "foodienator": "ロイヤルホテル",
@@ -72,7 +74,11 @@ class LocalString extends Translations {
           "createInventory": "在庫を作成",
           "addInventory": "在庫を追加",
           "validationMsg": "名前と価格を入力してください",
-          "placeOrder": "注文する"
+          "placeOrder": "注文する",
+          "assigneToMe": "私に割り当てる",
+          "assigneToChef": "シェフに割り当てる",
+          "selectChef": "シェフを選択",
+          "changeToComplete": "完了に変更"
         },
         "es": {
           "foodienator": "Hotel Royal",
@@ -107,7 +113,11 @@ class LocalString extends Translations {
           "createInventory": "Crear inventario",
           "addInventory": "Agregar inventario",
           "validationMsg": "Por favor, ingrese el nombre y el precio",
-          "placeOrder": "Realizar pedido"
+          "placeOrder": "Realizar pedido",
+          "assigneToMe": "Asignar a mí",
+          "assigneToChef": "Asignar a Chef",
+          "selectChef": "Seleccionar Chef",
+          "changeToComplete": "Cambiar a Completado"
         },
         "hi": {
           "foodienator": "रॉयल होटल",
@@ -142,7 +152,11 @@ class LocalString extends Translations {
           "createInventory": "इन्वेंटरी बनाएं",
           "addInventory": "इन्वेंटरी जोड़ें",
           "validationMsg": "कृपया नाम और मूल्य दर्ज करें",
-          "placeOrder": "आदेश दें"
+          "placeOrder": "आदेश दें",
+          "assigneToMe": "मुझे सौंपें",
+          "assigneToChef": "शेफ को सौंपें",
+          "selectChef": "शेफ का चयन करें",
+          "changeToComplete": "पूर्णता में बदलें"
         },
         "de": {
           "foodienator": "Hotel Royal",
@@ -178,7 +192,11 @@ class LocalString extends Translations {
           "createInventory": "Inventar erstellen",
           "addInventory": "Inventar hinzufügen",
           "validationMsg": "Bitte geben Sie den Namen und den Preis ein",
-          "placeOrder": "Bestellung aufgeben"
+          "placeOrder": "Bestellung aufgeben",
+          "assigneToMe": "Mir zuweisen",
+          "assigneToChef": "Koch zuweisen",
+          "selectChef": "Koch auswählen",
+          "changeToComplete": "Zu abgeschlossen ändern"
         },
         "pt": {
           "foodienator": "Hotel Royal",
@@ -213,7 +231,11 @@ class LocalString extends Translations {
           "createInventory": "Criar Inventário",
           "addInventory": "Adicionar ao Inventário",
           "validationMsg": "Por favor, insira o nome e o preço",
-          "placeOrder": "Fazer Pedido"
+          "placeOrder": "Fazer Pedido",
+          "assigneToMe": "Atribuir a Mim",
+          "assigneToChef": "Atribuir ao Chef",
+          "selectChef": "Selecionar Chef",
+          "changeToComplete": "Alterar para Completo"
         }
       };
 }
