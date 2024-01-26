@@ -47,7 +47,28 @@ class SplashView extends GetResponsiveView<SplashController> {
           AppStrings.splashMessage,
           style: AppFonts().h3.copyWith(color: AppColors.white),
         ),
-        bottomButton()
+        bottomButton(),
+        const SizedBox(
+          height: 20,
+        ),
+        InkWell(
+          onTap: () {
+            languageBottomsheet(Get.context);
+          },
+          child: Container(
+            width: 300,
+            decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(12)),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, bottom: 20),
+              child: Center(
+                child: Text(AppStrings.register,
+                    style: AppFonts().h3Bold.copyWith(color: AppColors.black)),
+              ),
+            ),
+          ),
+        )
       ],
     );
   }
@@ -109,5 +130,47 @@ class SplashView extends GetResponsiveView<SplashController> {
         ),
       ),
     );
+  }
+
+  languageBottomsheet(context) {
+    return showModalBottomSheet(
+        backgroundColor: AppColors.white,
+        enableDrag: false,
+        isScrollControlled: true,
+        context: context,
+        builder: (context) => SizedBox(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text("Select Language"),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Divider(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ...controller.languages.map((element) {
+                    return InkWell(
+                      onTap: () {
+                        Get.updateLocale(Locale(element["key"]));
+                        Get.back();
+                      },
+                      child: Column(
+                        children: [
+                          Text(element["name"]),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Divider()
+                        ],
+                      ),
+                    );
+                  }).toList()
+                ],
+              ),
+            ));
   }
 }

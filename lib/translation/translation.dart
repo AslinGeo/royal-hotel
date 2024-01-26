@@ -1,4 +1,6 @@
-import 'package:get/get_navigation/src/root/internacionalization.dart';
+
+
+import 'package:get/get.dart';
 
 class LocalString extends Translations {
   Map<String, Map<String, String>> get keys => {

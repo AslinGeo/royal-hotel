@@ -26,6 +26,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale: const Locale('en'),
+      fallbackLocale: const Locale('en'),
       title: 'Royal Hotel',
       theme: ThemeData(),
       initialRoute: AppPages.inital,
